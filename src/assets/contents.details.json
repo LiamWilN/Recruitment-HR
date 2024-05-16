@@ -1,0 +1,7 @@
+{
+    "NavigationLinks": [
+        { "title": "Admin Center", "id": "1"},
+        { "title": "Recruitment", "id": "2"},
+        { "title": "Job Posting", "id": "3"}
+    ]
+}
