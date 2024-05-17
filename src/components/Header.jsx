@@ -4,7 +4,7 @@ import LogoURL from '../assets/rmi_logo.png'
 import { X, Menu } from 'lucide-react'
 import DetailContents from '../assets/contents.details.json'
 import { useState } from 'react'
-import HiddenMenu from './HiddenMenu'
+import { HiddenMenu, MainMenu } from './Menus'
 
 
 const Header = () => {
@@ -30,19 +30,13 @@ const Header = () => {
                     </h1>
                 </div>
                 <div className='hidden md:flex items-center content-center'>
-                    {
-                        DetailContents.NavigationLinks.map( (i) => {
-                            return (
-                                <button key={i.id} className='w-26 gap-2 mx-4 font-bold'>{i.title}</button>
-                            )
-                        })
-                    }
+                    <MainMenu />
                 </div>
 
                 <div className='flex md:hidden'>
                     <button onClick={ () => { menuState(!currentMenu) }}>
                         {
-                            currentMenu ? <X className='mr-6'/> : <Menu className='mr-6' />
+                            currentMenu ? <X absoluteStrokeWidth className='mr-6'/> : <Menu absoluteStrokeWidth className='mr-6' />
                         }
                     </button>
                 </div>
