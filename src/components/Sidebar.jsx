@@ -1,19 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
-import { List, ListEnd } from 'lucide-react';
 
-const Sidebar = ({props}) => {
-
-    const [currentPanel, panelState] = useState(false);
-
+const Sidebar = () => {
   return (
-    <div className='flex justify-start'>
-        <button onClick={ () => panelState(!currentPanel)}>
-            {
-                currentPanel ? <List /> : <ListEnd />
-            }
-        </button>
-    </div>
+    <div className='flex flex-col md:flex-row w-full h-1/6 md:h-full md:w-1/12'>Sidebar</div>
   )
 }
 

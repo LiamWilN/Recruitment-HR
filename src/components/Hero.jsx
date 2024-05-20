@@ -4,7 +4,7 @@ import Mainbar from './Mainbar'
 
 const Hero = () => {
   return (
-    <div className='flex flex-row justify-start h-svh w-screen'>
+    <div className='flex flex-col md:flex-row justify-start h-h90p w-full'>
         <Sidebar />
         <Mainbar />
     </div>

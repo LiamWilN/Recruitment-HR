@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-        <div className='w-full border-b-2 border-sky-400 h-20 md:h-24'>
+        <div className='w-screen border-b-2 border-sky-400 h-20 md:h-24'>
             <div className='container mx-auto h-full flex items-center justify-between'>
                 <div className='flex items-center gap-2 ml-4'>
                     <LogoImage props = {
