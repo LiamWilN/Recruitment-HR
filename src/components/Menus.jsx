@@ -1,17 +1,18 @@
-import React from 'react'
 import { Globe, Telescope, PencilLine } from 'lucide-react'
 
 import SideNavigation from '../assets/contents.details.json'
 
-export const itemMenu = (item) => {
+export const ItemMenu = (item) => {
     const MenuItem = item
-
-    const MenuItems =  `SideNavigation.${MenuItem}.title`
-
-    console.log(MenuItems);
+    return (
+        SideNavigation[`${MenuItem}`].map( (i)=> {
+            <div key={i.id}>
+                {i.title}
+            </div>
+        })
+    )
+    
 }
-
-
 
 
 export const HiddenMenu = ({ props }) => {
@@ -26,7 +27,7 @@ export const HiddenMenu = ({ props }) => {
                     return (
                         <div className='py-2 flex w-3/5 justify-end items-center gap-2' key={i.id}>
                             {IconKeys[i.id]}
-                            <button title={i.title} onClick={ () => itemMenu(i.title) } > {i.title} </button>
+                            <button title={i.title} onClick={ () => ItemMenu(i.title) } > {i.title} </button>
                         </div>
                     )
                 })
@@ -42,10 +43,11 @@ export const MainMenu = ({ props }) => {
             {
                 props.items.map( (i) => {
                     return (
-                        <button title={i.title} key={i.id} className='w-26 gap-2 mx-4 font-bold' onClick={ () => itemMenu(i.title) }>{i.title}</button>
+                        <button title={i.title} key={i.id} className='w-26 gap-2 mx-4 font-bold' onClick={ () => ItemMenu(i.title) }>{i.title}</button>
                     )
                 })
             }
         </>
     )
 }
+

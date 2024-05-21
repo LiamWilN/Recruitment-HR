@@ -1,8 +1,11 @@
-import React from 'react'
+import { ItemMenu } from "./Menus"
+
 
 const Sidebar = () => {
   return (
-    <div className='flex flex-col md:flex-row w-full h-1/6 md:h-full md:w-1/12'>Sidebar</div>
+    <div className='flex flex-col md:flex-row w-full h-1/6 md:h-full md:w-1/12'>
+      <ItemMenu />
+    </div>
   )
 }
 

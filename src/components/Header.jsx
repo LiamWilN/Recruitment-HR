@@ -1,4 +1,3 @@
-import React from 'react'
 import { LogoImage } from './Image'
 import LogoURL from '../assets/rmi_logo.png'
 import { X, Menu } from 'lucide-react'
