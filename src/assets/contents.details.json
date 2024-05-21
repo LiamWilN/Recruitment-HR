@@ -5,23 +5,26 @@
         { "title": "Job Posting", "id": "2"}
     ],
 
-    "Admin Center": [
-        { "title": "Reports", "id": "0"},
-        { "title": "Client List", "id": "1"},
-        { "title": "Account Requests", "id": "2"},
-        { "title": "Account Modification", "id": "3"}
-    ],
+    "SideLinks" : {
 
-    "Recruitment": [
-        { "title": "Pending", "id": "0"},
-        { "title": "Completed", "id": "1"},
-        { "title": "In Progress", "id": "2"},
-        { "title": "Overall", "id": "3"}
-    ],
+        "Admin Center": [
+            { "title": "Reports", "id": "0"},
+            { "title": "Client List", "id": "1"},
+            { "title": "Account Requests", "id": "2"},
+            { "title": "Account Modification", "id": "3"}
+        ],
 
-    "Job Posting": [
-        { "title": "Post a Job", "id": "0"},
-        { "title": "Job List", "id": "1"},
-        { "title": "Availables", "id": "2"}
-    ]
+        "Recruitment": [
+            { "title": "Pending", "id": "0"},
+            { "title": "Completed", "id": "1"},
+            { "title": "In Progress", "id": "2"},
+            { "title": "Overall", "id": "3"}
+        ],
+
+        "Job Posting": [
+            { "title": "Post a Job", "id": "0"},
+            { "title": "Job List", "id": "1"},
+            { "title": "Availables", "id": "2"}
+        ]
+    }
 }

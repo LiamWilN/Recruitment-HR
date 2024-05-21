@@ -30,7 +30,8 @@ const Header = () => {
                     </h1>
                 </div>
                 <div className='hidden md:flex items-center content-center'>
-                    <MainMenu />
+                    <MainMenu props={{  
+                        items: DetailContents.NavigationLinks }} />
                 </div>
 
                 <div className='flex md:hidden'>
