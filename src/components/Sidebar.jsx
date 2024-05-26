@@ -1,12 +1,14 @@
-import { ItemMenu } from "./Menus"
+import SideMenus from '../assets/contents.details.json'
 
 
 const Sidebar = () => {
+  
   return (
-    <div className='flex flex-col md:flex-row w-full h-1/6 md:h-full md:w-1/12'>
-      <ItemMenu />
+    <div className='row-span-2'>
+      Side
+      
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

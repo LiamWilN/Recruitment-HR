@@ -3,7 +3,7 @@ import Mainbar from './Mainbar'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col md:flex-row justify-start h-screen w-full'>
+    <div className='grid grid-cols-3 grid-rows-2 h-svh'>
         <Sidebar />
         <Mainbar />
     </div>

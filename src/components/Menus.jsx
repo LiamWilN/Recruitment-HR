@@ -1,21 +1,12 @@
 import { Globe, Telescope, PencilLine } from 'lucide-react'
+import { useState } from 'react';
+import Sidebar from './Sidebar';
 
-import SideNavigation from '../assets/contents.details.json'
-
-export const ItemMenu = (item) => {
-    const MenuItem = item
-    return (
-        SideNavigation[`${MenuItem}`].map( (i)=> {
-            <div key={i.id}>
-                {i.title}
-            </div>
-        })
-    )
-    
-}
 
 
 export const HiddenMenu = ({ props }) => {
+
+    const [item, setItem] = useState(null);
     
     const IconKeys = [<Globe absoluteStrokeWidth />, <Telescope absoluteStrokeWidth />, <PencilLine absoluteStrokeWidth />];
 
@@ -27,7 +18,8 @@ export const HiddenMenu = ({ props }) => {
                     return (
                         <div className='py-2 flex w-3/5 justify-end items-center gap-2' key={i.id}>
                             {IconKeys[i.id]}
-                            <button title={i.title} onClick={ () => ItemMenu(i.title) } > {i.title} </button>
+                            <button title={i.title} onClick={ () => setItem(i.title) } > {i.title} </button>
+                            { console.log(item) }
                         </div>
                     )
                 })
@@ -38,12 +30,17 @@ export const HiddenMenu = ({ props }) => {
 
 export const MainMenu = ({ props }) => {
 
+    const [item, setItem] = useState(null);
+
     return (
         <>
             {
                 props.items.map( (i) => {
                     return (
-                        <button title={i.title} key={i.id} className='w-26 gap-2 mx-4 font-bold' onClick={ () => ItemMenu(i.title) }>{i.title}</button>
+                        <button title={i.title} key={i.id} className='w-26 gap-2 mx-4 font-bold' onClick={ () => setItem(i.title) }>
+                            {i.title}
+                            { console.log(item) }
+                        </button>
                     )
                 })
             }
