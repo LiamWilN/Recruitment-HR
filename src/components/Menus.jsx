@@ -1,5 +1,8 @@
 import { Globe, Telescope, PencilLine } from 'lucide-react'
-import Sidebar from './Sidebar';
+
+const selectItem = (props) => {
+    console.log(props)
+}
 
 export const HiddenMenu = ({ props }) => {
     
@@ -12,8 +15,9 @@ export const HiddenMenu = ({ props }) => {
 
                     return (
                         <div className='py-2 flex w-3/5 justify-end items-center gap-2' key={i.id}>
-                            {IconKeys[i.id]}
-                            <button title={i.title} onClick={ () => Sidebar(i.title) } > {i.title} </button>
+                            { IconKeys[i.id] }
+                            <button title={i.title} onSelect={ () => selectItem(i.title) } > {i.title} </button>
+                            
                         </div>
                     )
                 })
@@ -22,6 +26,7 @@ export const HiddenMenu = ({ props }) => {
     )
 }
 
+
 export const MainMenu = ({ props }) => {
 
     return (
@@ -29,7 +34,12 @@ export const MainMenu = ({ props }) => {
             {
                 props.items.map( (i) => {
                     return (
-                        <button title={i.title} key={i.id} className='w-26 gap-2 mx-4 font-bold' onClick={ () => Sidebar(i.title) }>{i.title}</button>
+                        <div key={i.id} >
+                            <button title={i.title} 
+                                className='w-26 gap-2 mx-4 font-bold' 
+                                onSelect={ () => selectItem(i.title) }
+                            > {i.title} </button>
+                        </div>
                     )
                 })
             }
