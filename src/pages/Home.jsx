@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import Footer from '../components/Footer'
 import Login from './Login'
 
 const Home = () => {
@@ -14,10 +15,11 @@ const Home = () => {
   return (
 
 
-    <>
+    <div className='h-dvh w-svw'>
         <Header ItemClicked={handleItemClick} />
         <Hero content={selectedItem} />
-    </>
+        <Footer />
+    </div>
   )
 }
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import JobPosting from './JobPosting';
+import Recruitment from './Recruitment';
+import AdminCenter from './AdminCenter';
 
 const Hero = ({ content }) => {
   const contentMap = {
-    'Admin Center': 'Admin Center',
-    'Recruitment': 'Recruitment',
+    'Admin Center': <AdminCenter />,
+    'Recruitment': <Recruitment />,
     'Job Posting': <JobPosting />,
   };
 
@@ -12,7 +14,7 @@ const Hero = ({ content }) => {
 
   return (
     <>
-      <div className="h-svh w-svw bg-slate-100 flex items-center justify-center ">
+      <div className="h-[90%] md:h-[85%] w-svw bg-slate-100 flex items-center justify-center">
         {
           displayContent
         }

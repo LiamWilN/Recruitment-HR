@@ -23,5 +23,18 @@
                 { "title": "Availables", "id": 2}
             ]
         }
+    ],
+
+
+    "Companies": [
+        {"title": "LF Maersk", "id": 1},
+        {"title": "GADC", "id": 2},
+        {"title": "Benby Group of Companies", "id": 3},
+        {"title": "Manila Water", "id": 4}
+
+
     ]
+
+
+
 }

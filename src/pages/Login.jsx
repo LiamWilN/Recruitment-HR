@@ -1,6 +1,6 @@
 import React from 'react'
 import RMILogo from '../assets/rmi_logo.png'
-import { UserRound, KeyRound } from 'lucide-react'
+import { UserRound, KeyRound, LogIn } from 'lucide-react'
 import MainScreen from '../assets/login_img.png'
 
 
@@ -18,7 +18,7 @@ const Login = () => {
                 <div className='flex flex-row gap-4 p-2 items-center'>
                     <KeyRound />
                     <input type="text" className='rounded-lg border-0 outline-none p-1 bg-neutral-200'/>
-                </div>
+                </div>    
                 <button className='bg-sky-300 text-white rounded-lg p-2'>
                     Login
                 </button>
