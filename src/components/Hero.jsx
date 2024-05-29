@@ -14,7 +14,7 @@ const Hero = ({ content }) => {
 
   return (
     <>
-      <div className="h-[90%] md:h-[85%] w-svw bg-slate-100 flex items-center justify-center">
+      <div className="h-svh w-svw bg-slate-100 flex items-center justify-center">
         {
           displayContent
         }

@@ -1,10 +1,14 @@
 import React from 'react'
 import { LogOut } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
 
 const LogOutButton = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
-        <button className='hidden md:flex items-center gap-2'>
+        <button className='hidden md:flex items-center gap-2' onClick={() => navigate('/')}>
             <LogOut /> 
             <h4 className='font-bold'>
                 Logout
