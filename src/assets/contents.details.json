@@ -30,7 +30,13 @@
         {"title": "LF Maersk", "id": 1},
         {"title": "GADC", "id": 2},
         {"title": "Benby Group of Companies", "id": 3},
-        {"title": "Manila Water", "id": 4}
+        {"title": "Manila Water", "id": 4},
+        {"title": "Readyman, Inc.", "id": 5},
+        {"title": "Express Speed Riders, Inc,", "id": 6},
+        {"title": "Getwell Health System, Inc.", "id": 7},
+        {"title": "RYS Property Holdings, Inc.", "id": 8},
+        {"title": "Eaglematrix Security Agency", "id": 9}
+
 
 
     ]

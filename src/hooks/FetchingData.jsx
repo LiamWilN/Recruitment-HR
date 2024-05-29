@@ -1,33 +1,39 @@
-import { Activity, BriefcaseBusiness, HandCoins, MapPin, ShieldMinus, ShieldX } from 'lucide-react';
+import { BriefcaseBusiness, HandCoins, MapPin } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
-
-const FetchingData = () => {
-    const [jobs, getJobs] = useState([]);
+const FetchingData = ({ filterCriteria }) => {
+    const [jobs, setJobs] = useState([]);
 
     const jobStatus = [
-        {id: 1, "title": "ACTIVE"},
-        {id: 2, "title": "INACTIVE"},
-        {id: 3, "title": "CLOSED"}
-    ]
+        { id: 1, "title": "ACTIVE" },
+        { id: 2, "title": "INACTIVE" },
+        { id: 3, "title": "CLOSED" }
+    ];
 
     useEffect(() => {
         fetch('https://api.dev.readymaninc.com/api/v1/jobs?job_title=&min_salary=&max_salary=&job_specialization=&city_name=&province_name=&job_type_name=&work_setup_name=&exp_level_title=')
             .then(response => response.json())
-            .then(data => getJobs(data.data))
+            .then(data => setJobs(data.data))
             .catch(err => console.log(err));
     }, []);
 
-    
+    const filteredJobs = filterCriteria
+        ? jobs.filter(job => {
+            const matchesTitle = filterCriteria.job_title ? job.job_title.includes(filterCriteria.job_title) : true;
+            // const matchesCompany = filterCriteria.company_name ? job.company.company_name.includes(filterCriteria.company_name) : true;
+            return matchesTitle 
+            // && matchesCompany;
+        })
+        : jobs;
 
     return (
         <div className="w-w90p h-h90p bg-white p-4 border overflow-hidden rounded-b-lg mx-auto">
             <div className="overflow-y-auto max-h-full">
                 <ul className="divide-y divide-gray-200">
-                    {jobs.map((item, index) => (
+                    {filteredJobs.map((item, index) => (
                         <li key={index} className="flex flex-col p-4">
                             <div className='flex mb-2 gap-4 items-center'>
-                                <img src={item.company.profile.company_logo} alt={item.company.company_name} className='w-12 h-12 object-contain'/>
+                                <img src={item.company.profile.company_logo} alt={item.company.company_name} className='w-12 h-12 object-contain' />
                                 <div>
                                     <h1 className='font-bold text-xl sm:text-2xl'>
                                         {item.job_title}
@@ -61,7 +67,11 @@ const FetchingData = () => {
                                 {item.job_summary}
                             </div>
                             <div className='text-sm sm:text-base'>
-                                {item.job_summary}
+                                <ul className='list-disc p-8'>
+                                    {JSON.parse(item.job_responsibilities).map((responsibility, index) => (
+                                        <li key={index} className='p-2'>{responsibility}</li>
+                                    ))}
+                                </ul>
                             </div>
                             <div className='flex justify-end items-center mt-2'>
                                 <select name="jobstatus" id="jobstatus" className='border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
@@ -73,13 +83,11 @@ const FetchingData = () => {
                                 </select>
                             </div>
                         </li>
-                        
                     ))}
                 </ul>
             </div>
         </div>
-
     );
-}
+};
 
 export default FetchingData;
