@@ -6,6 +6,7 @@ import { HiddenMenu, MainMenu } from './Menus'
 import LogOutButton from './Button'
 
 
+
 const Header = ({ ItemClicked }) => {
 
     const [currentMenu, menuState] = useState(false);
@@ -14,7 +15,7 @@ const Header = ({ ItemClicked }) => {
 
   return (
     <>
-        <div className='border-b-2 border-sky-400 h-[10%] w-svw md:h-[15%]'>
+        <div className='border-b-2 border-sky-400 h-20 w-full md:h-24'>
             <div className='container mx-auto h-full flex items-center justify-between'>
                 <div className='flex items-center gap-2 ml-4'>
                     <LogoImage props = {

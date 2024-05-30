@@ -8,7 +8,9 @@ const LogOutButton = () => {
 
   return (
     <>
-        <button className='hidden md:flex items-center gap-2' onClick={() => navigate('/')}>
+        <button className='hidden md:flex items-center gap-2'
+          onClick={() => navigate('/')}
+        >
             <LogOut /> 
             <h4 className='font-bold'>
                 Logout
