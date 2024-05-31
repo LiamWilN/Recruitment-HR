@@ -1,19 +1,26 @@
-import Home from './pages/Home';
-import Login from './pages/Login';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import NotFound from "./pages/NotFound.jsx";
+import Login from "./pages/Login.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-function App() {
+export default App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+      errorElement: <NotFound />,
+      children: [
+        {
+          path: "home",
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path='/' index element={<Login />} />
-          <Route path='/home' element={<Home />} />
-        </Routes>
-      </Router>
-        
+      <RouterProvider router={router} />
     </>
   );
-}
-
-export default App;
+};

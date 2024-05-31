@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Header from "../main/Header";
-import Hero from "../main/Hero";
-import Footer from "../main/Footer";
+import Header from "../structure/Header";
+import Hero from "../structure/Hero";
+import Footer from "../structure/Footer";
 
 const Home = () => {
   const [selectedItem, setSelectedItem] = useState("Admin Center");

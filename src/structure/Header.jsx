@@ -2,8 +2,8 @@ import { LogoImage } from "../components/Images";
 import LogoURL from "../assets/rmi_logo.png";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
-import { HiddenMenu, MainMenu } from "../components/Menus";
-import LogOutButton from "../components/Button";
+import { HiddenMenu, MainMenu } from "../components/NavigationMenu";
+import LogOutButton from "../components/Buttons";
 
 const Header = ({ ItemClicked }) => {
   const [currentMenu, menuState] = useState(false);

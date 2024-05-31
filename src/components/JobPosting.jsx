@@ -1,7 +1,7 @@
 import React from "react";
 import RecruitmentPicture from "../assets/recruitment.png";
 import { RecruitmentImage } from "./Images";
-import JobPostingForm from "./JobPostingForm";
+import JobPostingForm from "./PostingForm";
 
 const JobPosting = () => {
   return (

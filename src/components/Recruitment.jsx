@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FetchingData from "../hooks/FetchingData";
+import FetchingData from "./JobList";
 import { Search } from "lucide-react";
 
 const Recruitment = () => {
