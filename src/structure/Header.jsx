@@ -1,4 +1,4 @@
-import { LogoImage } from "../components/Image";
+import { LogoImage } from "../components/Images";
 import LogoURL from "../assets/rmi_logo.png";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";

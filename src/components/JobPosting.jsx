@@ -1,6 +1,6 @@
 import React from "react";
 import RecruitmentPicture from "../assets/recruitment.png";
-import { RecruitmentImage } from "./Image";
+import { RecruitmentImage } from "./Images";
 import JobPostingForm from "./JobPostingForm";
 
 const JobPosting = () => {
